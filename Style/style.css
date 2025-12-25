@@ -1,0 +1,20 @@
+.form-control {
+border: none;
+border-bottom: 2px solid rgb(94, 94, 94);
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+    border-bottom: 2px solid rgb(94, 94, 94);
+}
+
+img{
+    width: 10rem;
+    height: 10rem;
+object-fit:cover;
+cursor: pointer;
+}
+
+i{cursor: pointer;}
+td{vertical-align: middle;}

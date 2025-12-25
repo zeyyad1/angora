@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--FONTS-->
+    <!--FONTS ENDS-->
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="./Style/all.min.css" />
+    <!--FONTAWESOME ENDS-->
+
+    <!--css-->
+    <link rel="stylesheet" href="./Style/media.css" />
+  
+
+    <!--css ends-->
+
+    <!--BootStrap-->
+    <link rel="stylesheet" href="./Style/bootstrap.min.css" />
+    <!--BootStrap-->
+      <link rel="stylesheet" href="./Style/style.css" />
+  </head>
+  <body>
+    <!--FORM-->
+
+    <div class="w-75 mx-auto">
+
+
+      <h1 class="text-center fw-bold pt-5 pb-3 text-dark">
+        Product Management System
+      </h1>
+
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder="product name"
+          list="prodList"
+          oninput="validatProductName()"
+        />
+        <label for="productName">Enter Product Name</label>
+        <datalist id="prodList">
+
+        <option>OPPO</option>
+        <option>Samsung</option>
+        <option>Apple</option>
+        <option>Iphone</option>
+
+        </datalist>
+      </div>
+      <p id="nameRegexError" class="text-danger d-none" >
+        Product Name Atleast 4 Letters & First Letter UpperCase.
+      </p>
+          <p id="nameRequiredError" class="text-danger d-none">Product Name is Required</p>
+      <div class="form-floating mb-3  mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="productPrice"
+          placeholder="Product Price"
+          oninput="validateProductPrice()"
+        />
+        <label for="productPrice">Product Price</label>
+      </div>
+      <p id="priceRegexError" class="d-none text-danger">Product Price In Numbers</p>
+      <p id="priceRequiredError" class="d-none text-danger">Product Price Is Required</p>
+      <div class="form-floating mb-3" >
+        <input
+          type="text"
+          class="form-control"
+          id="productCategory"
+          placeholder="Product Category"
+          list="catlist"
+          oninput="validateCategoryField()"
+        />
+        <label for="productCategory">Product Category</label>
+<p id="catRegexError" class="d-none text-danger">Product Category Is Atleast 4 Letters & First Letter UpperCase.</p>
+      <p id="catRequiredError" class="d-none text-danger">Product Category Is Required</p>
+      
+      </div>
+<datalist id="catlist">
+        <option>Phones</option>
+        <option>Tvs</option>
+        <option>Electronics</option>
+        <option>Tablets</option>
+      </datalist>
+      <div class="form-floating mb-3" >
+        <input
+          type="text"
+          class="form-control"
+          id="productDescription"
+          placeholder="Product Description"
+        />
+        <label for="productDescription">Product Description</label>
+      </div>
+
+      <div class="form-floating mb-2 p-2" >
+        <input
+          type="file"
+          class="form-control"
+          id="productImage"
+          placeholder="Select Product Image"
+        />
+        <label for="productImage">Product Image</label>
+      </div>
+
+<!--ACTION BUTTON-->
+<button id="addBtn" onclick="addProducts()" class="btn btn-dark m-1 px-4 py-3"> Add Product</button>
+
+<button id="UpdateBtn" onclick="updateProduct()" class="btn m-1 d-none btn-outline-dark text-black px-4 py-3"> Update Product</button>
+
+
+    </div>
+<!--FORM ENDS-->
+
+
+<!--DISPLAYING PRODUCTS-->
+ <div class="container">
+  <h5 class="text-center fw-bold pt-5 pb-3 text-dark">Search Products</h5>
+  <div class="form-floating mb-3">
+        <input
+        oninput="searchOnProducts()"
+          type="text"
+          class="form-control"
+          id="productSearch"
+          placeholder="Search On Products"
+          list="prodList"
+        />
+        <label for="productSearch">Search Products</label>
+        <datalist id="prodList">
+
+        <option>OPPO</option>
+        <option>Samsung</option>
+        <option>Apple</option>
+        <option>Iphone</option>
+
+        </datalist>
+      </div>
+<h2 class="text-center fw-bold pt-5 pb-3 text-dark">Available Products</h2>
+
+<table class="table ">
+  <thead class="table-dark px-1">
+    <th>Id</th>
+    <th>Product Image</th>
+    <th>Product Name</th>
+    <th>Product Price</th>
+    <th>Product Category</th>
+    <th>Product Description</th>
+    <th>Actions</th>
+  </thead>
+  <tbody id="tbody">
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+ </div>
+<!--DISPLAYING PRODUCTS ENDS-->
+
+
+
+
+    <!--BootStrap-->
+    <script src="./JavaScript/bootstrap.bundle.min.js"></script>
+    <!--BootStrap-->
+    <!--JAVA MAIN-->
+    <script src="./JavaScript/javascrpt.js"></script>
+    <!--JAVA MAIN-->
+  </body>
+</html>
+
